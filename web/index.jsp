@@ -11,6 +11,23 @@
     <title>Title</title>
 </head>
 <body>
+<h1>一覧画面</h1>
+<hr>
+<table border="1">
+    <thead>
+    <tr>
+        <th>&nbsp;</th>
 
+
+    </tr>
+    </thead>
+    <tbody>
+    <%
+
+    %>
+    </tbody>
+
+
+</table>
 </body>
 </html>
