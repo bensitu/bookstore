@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.northsea.store.mapper.BookMapper">
+    <!--int insertBook(); -->
+    <select id="insertBook">
+        insert into practice_table values('00004', 'HTMLの本', 1500, 'ボブ', '簡単なHTMLのテキストです');
+    </select>
+
+    <!--void updateBook(); -->
+    <update id="updateBook">
+
+    </update>
+</mapper>
