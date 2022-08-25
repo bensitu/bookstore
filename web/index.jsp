@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>一覧画面</title>
 </head>
 <body>
 <h1>一覧画面</h1>
@@ -16,15 +16,21 @@
 <table border="1">
     <thead>
     <tr>
-        <th>&nbsp;</th>
-
-
+        <th>ID</th>
+        <th>名前</th>
     </tr>
     </thead>
     <tbody>
     <%
+        for (int i = 0; i <; i++) {
+
 
     %>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <% } %>
     </tbody>
 
 
