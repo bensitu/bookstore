@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="bookstore:war" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b243fac-fe17-4673-b7e9-866e2f25bacd" name="Changes" comment="20220825">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/northsea/store/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/northsea/store/mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/northsea/store/pojo/book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/northsea/store/pojo/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/northsea/store/test/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/northsea/store/test/MyBatisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/northsea/store/servlet1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/northsea/bookstore/mapper/BookMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +26,19 @@
         <option value="Jsp File" />
         <option value="XML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,13 +53,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "settings.editor.selected.configurable": "SQL Resolution Scopes"
   },
   "keyToStringList": {
     "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
@@ -57,7 +68,12 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MyBatisTest.testQueryeBookByParam">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/northsea/bookstore/mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.23">
     <configuration name="MyBatisTest.testInsertBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bookstore" />
       <extension name="coverage">
@@ -140,7 +156,13 @@
     </configuration>
     <configuration name="Tomcat 10.0.23" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
+      <deployment>
+        <artifact name="bookstore:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/bookstore_war" />
+          </settings>
+        </artifact>
+      </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="a3b63180-816c-4fb6-9413-80d3eac9df52" />
       </server-settings>
@@ -214,6 +236,9 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="bookstore:war" />
+        </option>
       </method>
     </configuration>
     <recent_temporary>
@@ -236,7 +261,7 @@
       <updated>1661318855054</updated>
       <workItem from="1661318856574" duration="2593000" />
       <workItem from="1661321694708" duration="16403000" />
-      <workItem from="1661412914112" duration="11899000" />
+      <workItem from="1661412914112" duration="16058000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1661323694907</created>
@@ -294,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661417514764</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="20220825">
+      <created>1661487929393</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661487929393</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,5 +347,9 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="20220825" />
     <option name="LAST_COMMIT_MESSAGE" value="20220825" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
