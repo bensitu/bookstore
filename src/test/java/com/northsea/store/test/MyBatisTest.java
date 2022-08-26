@@ -1,6 +1,7 @@
 package com.northsea.store.test;
 
 import com.northsea.store.mapper.BookMapper;
+import com.northsea.store.pojo.Book;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -9,6 +10,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 public class MyBatisTest {
 
@@ -26,7 +28,7 @@ public class MyBatisTest {
         //通过代理模式创建UserMapper接口的代理实现类对象
         BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
         //调用UserMapper接口中的方法，就可以根据UserMapper的全类名匹配元素文件，通过调用的方法名匹配映射文件中的SQL标签，并执行标签中的SQL语句
-        int result = bookMapper.insertBook();
+        String result = bookMapper.insertBook();
         //提交事务
         //sqlSession.commit();
         System.out.println("result:" + result);
@@ -39,5 +41,44 @@ public class MyBatisTest {
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
         bookMapper.updateBook();
+    }
+
+    @Test
+    public void testDeleteBook() throws IOException {
+        InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
+        bookMapper.deleteBook();
+    }
+
+    @Test
+    public void testQueryeBookByID() throws IOException {
+        InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
+        Book book = bookMapper.getBookInfoByID("00001");
+        System.out.println(book);
+    }
+
+    @Test
+    public void testQueryeAllBook() throws IOException {
+        InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
+        List<Book> list = bookMapper.getAllBookInfo();
+        list.forEach(book -> System.out.println(book));
+    }
+
+    @Test
+    public void testQueryeBookByParam() throws IOException {
+        InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
+        Book book = bookMapper.getBookInfoByParam("00001", "Javaの本");
+        System.out.println(book);
     }
 }

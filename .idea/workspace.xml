@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9b243fac-fe17-4673-b7e9-866e2f25bacd" name="Changes" comment="20220825">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/details.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/northsea/store/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/northsea/store/mapper/BookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/northsea/store/pojo/book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/northsea/store/pojo/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BookMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/northsea/store/test/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/northsea/store/test/MyBatisTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,9 +50,14 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "MySQL"
+    ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MyBatisTest.testInsertBook">
+  <component name="RunManager" selected="JUnit.MyBatisTest.testQueryeBookByParam">
     <configuration name="MyBatisTest.testInsertBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bookstore" />
       <extension name="coverage">
@@ -60,6 +69,70 @@
       <option name="PACKAGE_NAME" value="com.northsea.store.test" />
       <option name="MAIN_CLASS_NAME" value="com.northsea.store.test.MyBatisTest" />
       <option name="METHOD_NAME" value="testInsertBook" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.testQueryeAllBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.northsea.store.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.northsea.store.test" />
+      <option name="MAIN_CLASS_NAME" value="com.northsea.store.test.MyBatisTest" />
+      <option name="METHOD_NAME" value="testQueryeAllBook" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.testQueryeBookByID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.northsea.store.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.northsea.store.test" />
+      <option name="MAIN_CLASS_NAME" value="com.northsea.store.test.MyBatisTest" />
+      <option name="METHOD_NAME" value="testQueryeBookByID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.testQueryeBookByParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.northsea.store.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.northsea.store.test" />
+      <option name="MAIN_CLASS_NAME" value="com.northsea.store.test.MyBatisTest" />
+      <option name="METHOD_NAME" value="testQueryeBookByParam" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.testUpdateBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.northsea.store.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.northsea.store.test" />
+      <option name="MAIN_CLASS_NAME" value="com.northsea.store.test.MyBatisTest" />
+      <option name="METHOD_NAME" value="testUpdateBook" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,7 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyBatisTest.testQueryeBookByParam" />
         <item itemvalue="JUnit.MyBatisTest.testInsertBook" />
+        <item itemvalue="JUnit.MyBatisTest.testQueryeBookByID" />
+        <item itemvalue="JUnit.MyBatisTest.testQueryeAllBook" />
+        <item itemvalue="JUnit.MyBatisTest.testUpdateBook" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +236,7 @@
       <updated>1661318855054</updated>
       <workItem from="1661318856574" duration="2593000" />
       <workItem from="1661321694708" duration="16403000" />
-      <workItem from="1661412914112" duration="3867000" />
+      <workItem from="1661412914112" duration="11899000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1661323694907</created>
@@ -210,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661415558886</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="20220825">
+      <created>1661417514764</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661417514764</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,16 +315,5 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="20220825" />
     <option name="LAST_COMMIT_MESSAGE" value="20220825" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/northsea/store/test/MyBatisTest.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
