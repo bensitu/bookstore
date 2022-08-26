@@ -25,4 +25,15 @@ public class BookService {
 
         return books;
     }
+
+    public Book getBookDetail(){
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
+
+        Book bookdetail = bookMapper.getBookInfoByParam("id");
+
+        sqlSession.close();
+        return bookdetail;
+    }
 }

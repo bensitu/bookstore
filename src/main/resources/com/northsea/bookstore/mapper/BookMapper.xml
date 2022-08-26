@@ -5,32 +5,42 @@
 <mapper namespace="com.northsea.store.mapper.BookMapper">
     <!--int insertBook(); -->
     <select id="insertBook" resultType="int">
-        insert into practice_table values('00004', 'HTMLの本', 1500, 'ボブ', '簡単なHTMLのテキストです');
+        insert into practice_table
+        values (#{id}, #{name}, #{price}, #{author}, #{comment});
     </select>
 
-    <!--void updateBook(); -->
+    <!--void updateBook(String name, String id);-->
     <update id="updateBook">
-        update practice_table set name='人生の初めJava本' where id = '00004';
+        update practice_table
+        set name=#{name}
+        where id = #{id};
     </update>
 
     <!--void deleteBook(); -->
     <delete id="deleteBook">
-        delete from practice_table where id='00004';
+        delete
+        from practice_table
+        where id = #{id};
     </delete>
 
     <!-- Book getBookInfoByID(String id); -->
     <select id="getBookInfoByID" resultType="com.northsea.store.pojo.Book">
-        select * from practice_table where id= #{id};
+        select *
+        from practice_table
+        where id = #{id};
     </select>
 
     <!-- List<Book> getAllBookInfo(); -->
     <select id="getAllBookInfo" resultType="com.northsea.store.pojo.Book">
-        select * from practice_table;
+        select *
+        from practice_table;
     </select>
 
     <!-- Book getBookInfoByParam(@Param("id") String id, @Param("name") String name);-->
     <select id="getBookInfoByParam" resultType="com.northsea.store.pojo.Book">
-        select * from practice_table where id = #{id} and name = #{name};
+        select *
+        from practice_table
+        where id = #{id};
     </select>
 
 </mapper>

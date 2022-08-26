@@ -28,7 +28,7 @@ public class MyBatisTest {
         //通过代理模式创建UserMapper接口的代理实现类对象
         BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
         //调用UserMapper接口中的方法，就可以根据UserMapper的全类名匹配元素文件，通过调用的方法名匹配映射文件中的SQL标签，并执行标签中的SQL语句
-        String result = bookMapper.insertBook();
+        String result = bookMapper.insertBook("00004", "CSSの本", 3000, "BenSiTu","素晴らしいこと");
         //提交事务
         //sqlSession.commit();
         System.out.println("result:" + result);
@@ -40,7 +40,7 @@ public class MyBatisTest {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
-        bookMapper.updateBook();
+        bookMapper.updateBook("HTMLの本", "00004");
     }
 
     @Test
@@ -49,7 +49,7 @@ public class MyBatisTest {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
-        bookMapper.deleteBook();
+        bookMapper.deleteBook("00004");
     }
 
     @Test
@@ -69,7 +69,7 @@ public class MyBatisTest {
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
         List<Book> list = bookMapper.getAllBookInfo();
-        list.forEach(book -> System.out.println(book));
+        list.forEach(System.out::println);
     }
 
     @Test
@@ -78,7 +78,7 @@ public class MyBatisTest {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
-        Book book = bookMapper.getBookInfoByParam("00001", "Javaの本");
+        Book book = bookMapper.getBookInfoByParam("00001");
         System.out.println(book);
     }
 }

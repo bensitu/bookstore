@@ -6,15 +6,15 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface BookMapper {
-     String insertBook();
+     String insertBook(String id, String name, int price, String author, String comment);
 
-     void updateBook();
+     void updateBook(String name, String id);
 
-     void deleteBook();
+     void deleteBook(String id);
 
      Book getBookInfoByID(String id);
 
      List<Book> getAllBookInfo();
 
-     Book getBookInfoByParam(@Param("id") String id, @Param("name") String name);
+     Book getBookInfoByParam(@Param("id") String id);
 }

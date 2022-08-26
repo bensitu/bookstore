@@ -16,6 +16,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mappers/BookMapper.xml"/>
+        <mapper resource="com/northsea/bookstore/mapper/BookMapper.xml"/>
     </mappers>
 </configuration>
