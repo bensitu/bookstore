@@ -2,13 +2,12 @@ package com.northsea.store.view;
 
 import com.northsea.store.controller.BookService;
 import com.northsea.store.pojo.Book;
-
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class GetAllBookInfoServlet extends HttpServlet {
 
         request.setAttribute("books", books);
 
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/books.jsp").forward(request, response);
     }
 
     @Override
