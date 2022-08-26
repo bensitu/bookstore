@@ -14,7 +14,7 @@ public class BookDetailsServlet extends HttpServlet {
     private BookService bookService = new BookService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Book book = BookService.getBookDetail();
+
 
     }
 

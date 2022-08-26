@@ -36,4 +36,15 @@ public class BookService {
         sqlSession.close();
         return bookdetail;
     }
+
+    public void addNewBook(Book book){
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
+
+        bookMapper.insertBook("00004", "ABC Book", 1000, "Tom", "English book");
+
+        sqlSession.commit();
+        sqlSession.close();
+    }
 }

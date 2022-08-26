@@ -29,7 +29,7 @@
     <%
         for (int i = 0; i < book.size(); i++) {
     %>
-    <tr>
+    <tr align="center">
         <td><a href="<%=request.getContextPath() %>/details?id=<%=book.get(i).getId()%>"><%=book.get(i).getId()%>
         </a></td>
         <td><%=book.get(i).getName()%>
