@@ -1,3 +1,5 @@
+<%@page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.io.InputStream" %>
 <%@ page import="org.apache.ibatis.io.Resources" %>
 <%@ page import="org.apache.ibatis.session.SqlSessionFactory" %>
@@ -5,7 +7,9 @@
 <%@ page import="org.apache.ibatis.session.SqlSession" %>
 <%@ page import="com.northsea.store.mapper.BookMapper" %>
 <%@ page import="com.northsea.store.pojo.Book" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+
+<%--
   Created by IntelliJ IDEA.
   User: ben
   Date: 2022/8/24
@@ -37,12 +41,18 @@
     </tr>
     </thead>
     <tbody>
-    <%
-        for (int i = 0; i <list.size(); i++) {
-    %>
+    <c:forEach items="${books}" var="book" varStatus="status">
+        <tr align="center">
+            <th><a href="${}">${book.id}</a> </th>
+            <td>${book.name}</td>
+        </tr>
+    </c:forEach>
+
     <tr>
-        <td><a href="<%= %>"><%=list.get(i).getId()%></a></td>
-        <td><%=list.get(i).getName()%></td>
+        <td><a href="<%= %>"><%=list.get(i).getId()%>
+        </a></td>
+        <td><%=list.get(i).getName()%>
+        </td>
     </tr>
     <% } %>
     </tbody>
